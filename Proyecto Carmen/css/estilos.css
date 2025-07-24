@@ -1,0 +1,181 @@
+/* estilos.css */
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  background: linear-gradient(to bottom, #D3D3D3, #E0E0F0, #F5F5FA);
+  background-attachment: fixed;
+}
+
+/* Header con gris medio */
+header {
+  background-color: #D0D0D0;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #888;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #111;
+}
+
+/* Navegación */
+nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  margin-top: 10px;
+  padding: 0;
+}
+nav a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #000;
+}
+nav a i {
+  font-size: 1.2rem;
+  color: #111;
+}
+
+/* (Resto del CSS sigue igual — slider, formulario, etc.) */
+
+
+/* Títulos centrados */
+.titulo-pagina {
+  text-align: center;
+  font-size: 2.4em;
+  font-weight: 700;
+  margin: 50px 0 30px;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto 80px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.slide {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 0.8s ease-in-out;
+}
+.slide.active {
+  opacity: 1;
+  position: relative;
+}
+.slide iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  display: block;
+  border: none;
+  border-radius: 8px;
+}
+.slide img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Botones del slider */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+.prev:hover, .next:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Formulario */
+form {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #ffffffcc;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-size: 1em;
+}
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+form .btn {
+  margin-top: 20px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+form .btn:hover {
+  background-color: #222;
+}
+
+/* Botones generales */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #444;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #222;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .prev, .next {
+    font-size: 1.5rem;
+  }
+}

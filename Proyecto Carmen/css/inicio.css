@@ -1,0 +1,123 @@
+/* inicio.css */
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  background: linear-gradient(to bottom, #D3D3D3, #E0E0F0, #F5F5FA);
+  background-attachment: fixed;
+}
+
+header {
+  background-color: #D0D0D0; /* Gris medio */
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #888;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #111;
+}
+
+/* Menú */
+nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  margin-top: 10px;
+  padding: 0;
+}
+nav a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #000;
+}
+nav a i {
+  font-size: 1.2rem;
+  color: #111;
+}
+
+/* Sección bienvenida */
+main.welcome {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+main.welcome h2 {
+  font-size: 2.4em;
+  margin-bottom: 20px;
+}
+main.welcome p {
+  font-size: 1.1em;
+  line-height: 1.7;
+  margin: 10px 0;
+}
+.acciones {
+  margin-top: 30px;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #444;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #222;
+}
+
+
+/* Sección bienvenida */
+main.welcome {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+main.welcome h2 {
+  font-size: 2.4em;
+  margin-bottom: 20px;
+}
+main.welcome p {
+  font-size: 1.1em;
+  line-height: 1.7;
+  margin: 10px 0;
+}
+.acciones {
+  margin-top: 30px;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #444;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #222;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
