@@ -1,0 +1,13 @@
+# Material de trabajo, no forma parte de la web publicada.
+# El workflow de Pages sube el repositorio entero, así que todo lo que
+# esté aquí dentro sería descargable por cualquiera: los PDF originales
+# (38 MB), el CV con datos personales y la copia de la versión anterior.
+contexto/
+
+# Ajustes locales del editor
+.claude/
+
+# Basura del sistema
+Thumbs.db
+desktop.ini
+.DS_Store

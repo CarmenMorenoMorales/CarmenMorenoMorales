@@ -3,37 +3,196 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inicio - Carmen Moreno Morales</title>
-  <link rel="stylesheet" href="css/inicio.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <title>Carmen Moreno Morales — Directora de fotografía</title>
+  <meta name="description" content="Portfolio de Carmen Moreno Morales, directora de fotografía y creadora audiovisual en Sevilla y Málaga. Cortometrajes, videoclips y videoarte." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Carmen Moreno Morales — Directora de fotografía" />
+  <meta property="og:description" content="Cortometrajes, videoclips y videoarte. Dirección de fotografía, cámara y etalonaje." />
+  <meta property="og:image" content="Fotos/carmen-portada-ancha.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%231B24E0'/><text x='16' y='24' font-family='Helvetica,Arial' font-size='22' font-weight='bold' fill='%23EFEEE9' text-anchor='middle'>C</text></svg>" />
+
+  <link rel="preload" href="css/fuentes/Aileron-Black.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/estilos.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <h1>Carmen Moreno Morales</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
+
+  <header class="cabecera">
+    <a class="marca" href="index.html">Carmen Moreno Morales</a>
+
+    <nav class="nav" id="nav" aria-label="Navegación principal">
+      <ul class="nav__lista">
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
         <li><a href="proyectos.html">Proyectos</a></li>
-        <li><a href="galeria.html">Galería</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
         <li><a href="curriculum.html">Currículum</a></li>
-        <li><a href="https://www.instagram.com/caarmeenmm?igsh=M29qc2Iwd2lwcWJ5" target="_blank"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/carmen-moreno-morales-135b5b360/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <ul class="nav__social">
+        <li><a href="https://www.instagram.com/caarmeenmm?igsh=M29qc2Iwd2lwcWJ5" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/carmen-moreno-morales-135b5b360/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
       </ul>
     </nav>
+
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+      <span></span>
+    </button>
   </header>
 
-  <main class="welcome">
-    <h2>Directora de Fotografía & Creativa Visual</h2>
-    <p>Soy Carmen Moreno Morales, una apasionada del lenguaje visual y la narrativa cinematográfica. Mi enfoque combina sensibilidad estética con el poder de la luz y la cámara para contar historias que emocionan.</p>
-    <p>He participado en diversos cortometrajes y proyectos artísticos donde la imagen se convierte en protagonista. En este sitio podrás explorar mis trabajos, inspiración y trayectoria profesional.</p>
-    
-    <div class="acciones">
-      <a href="proyectos.html" class="btn">Ver Proyectos</a>
-      <a href="galeria.html" class="btn">Explorar Galería</a>
-      <a href="curriculum.html" class="btn">Ver Currículum</a>
-    </div>
+  <main>
+
+    <!-- ============ PORTADA ============ -->
+    <section class="portada">
+      <div class="portada__media">
+        <picture>
+          <source media="(max-width: 860px)" srcset="Fotos/carmen-portada-alta.jpg" />
+          <img src="Fotos/carmen-portada-ancha.jpg"
+               alt="Carmen Moreno Morales operando una cámara de cine durante un rodaje en exteriores"
+               width="2400" height="1600" fetchpriority="high" />
+        </picture>
+      </div>
+      <div class="portada__velo"></div>
+
+      <div class="portada__texto">
+        <div class="contenedor">
+          <p class="portada__eyebrow">Sevilla / Málaga · Departamento de cámara</p>
+          <h1 class="portada__nombre">
+            <span>Carmen</span>
+            <span>Moreno Morales</span>
+          </h1>
+          <div class="portada__pie">
+            <p class="portada__lema">Creadora audiovisual</p>
+            <a href="proyectos.html" class="btn btn--primario">Ver proyectos</a>
+            <a href="curriculum.html" class="btn">Currículum</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE ELLA ============ -->
+    <section class="seccion" id="sobre">
+      <div class="contenedor">
+        <div class="intro revelar">
+          <div>
+            <p class="etiqueta">Sobre mí</p>
+            <h2 class="titulo-seccion">Quién <br />soy</h2>
+          </div>
+
+          <div class="intro__texto">
+            <p><strong>Graduada en Comunicación Audiovisual</strong> por la Universidad de Sevilla y <strong>máster en Dirección de Fotografía</strong> por School Training, Escuela de Cine y Sonido. Especializada en creación de contenido audiovisual, con experiencia en producción y edición de vídeo, fotografía y contenido para redes sociales.</p>
+            <p>Organizada, creativa y resolutiva, acostumbrada a trabajar en equipo, adaptarme a distintos proyectos y tomar iniciativa. He pasado por casi todos los puestos del equipo de cámara e iluminación, y esa mirada desde dentro del set es la que traigo a cada proyecto nuevo.</p>
+
+            <ul class="capacidades">
+              <li><strong>08</strong> Obras como directora de fotografía</li>
+              <li><strong>17</strong> Rodajes desde 2022</li>
+              <li><strong>07</strong> Puestos distintos en set</li>
+              <li><strong>MÁSTER</strong> en Dirección de Fotografía, 2025</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRABAJO SELECCIONADO ============ -->
+    <section class="seccion seccion--alt" id="trabajo">
+      <div class="contenedor">
+        <div class="encabezado-seccion revelar">
+          <p class="etiqueta">Trabajo seleccionado</p>
+          <h2 class="titulo-seccion titulo--desborde">Piezas recientes</h2>
+          <p class="entradilla">Tres de los últimos trabajos en dirección de fotografía. En Proyectos están todos.</p>
+        </div>
+
+        <div class="carrusel">
+          <div class="carrusel__pista">
+
+            <div class="carrusel__item">
+              <article class="ficha revelar">
+                <a class="ficha__lanzar" href="proyectos.html#waltz" aria-label="Ver Waltz to my 宝贝">
+                  <img class="ficha__img" src="Fotos/miniaturas/waltz-01.jpg"
+                       alt="Fotograma del videoclip Waltz to my 宝贝" loading="lazy" width="900" height="506" />
+                  <span class="ficha__accion">Ver proyecto</span>
+                </a>
+                <div class="ficha__info">
+                  <p class="ficha__meta">Videoclip · 2026</p>
+                  <h3 class="ficha__titulo">Waltz to my 宝贝</h3>
+                  <p class="ficha__rol">Dirección de fotografía y etalonaje</p>
+                  <p class="ficha__prod">NVOH · La Colisión</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="carrusel__item">
+              <article class="ficha revelar">
+                <a class="ficha__lanzar" href="proyectos.html#brujas" aria-label="Ver Brujas">
+                  <img class="ficha__img" src="Fotos/miniaturas/brujas-04.jpg"
+                       alt="Fotograma de la pieza de videoarte Brujas" loading="lazy" width="900" height="506" />
+                  <span class="ficha__accion">Ver proyecto</span>
+                </a>
+                <div class="ficha__info">
+                  <p class="ficha__meta">Videoarte · 2025</p>
+                  <h3 class="ficha__titulo">Brujas</h3>
+                  <p class="ficha__rol">Idea original · Dirección de fotografía</p>
+                  <p class="ficha__prod">La Colisión</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="carrusel__item">
+              <article class="ficha revelar">
+                <a class="ficha__lanzar" href="proyectos.html#acentos" aria-label="Ver Los acentos de tus ojos">
+                  <img class="ficha__img" src="Fotos/miniaturas/acentos-05.jpg"
+                       alt="Fotograma del cortometraje Los acentos de tus ojos" loading="lazy" width="900" height="506" />
+                  <span class="ficha__accion">Ver proyecto</span>
+                </a>
+                <div class="ficha__info">
+                  <p class="ficha__meta">Cortometraje · 2025</p>
+                  <h3 class="ficha__titulo">Los acentos de tus ojos</h3>
+                  <p class="ficha__rol">Dirección de fotografía y etalonaje</p>
+                  <p class="ficha__prod">4 fotogramas dentro</p>
+                </div>
+              </article>
+            </div>
+
+          </div>
+
+          <div class="carrusel__controles">
+            <button class="carrusel__btn carrusel__btn--anterior" type="button" aria-label="Proyecto anterior">
+              <i class="fas fa-arrow-left" aria-hidden="true"></i>
+            </button>
+            <button class="carrusel__btn carrusel__btn--siguiente" type="button" aria-label="Proyecto siguiente">
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </button>
+            <div class="carrusel__puntos"></div>
+          </div>
+        </div>
+
+        <p style="margin-top:48px" class="revelar">
+          <a href="proyectos.html" class="enlace-flecha">Ver todos los proyectos <i class="fas fa-arrow-right"></i></a>
+        </p>
+      </div>
+    </section>
+
   </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie__fila">
+        <p class="pie__nombre">Carmen Moreno Morales</p>
+        <ul class="pie__social">
+          <li><a href="mailto:carmorenomorales@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
+          <li><a href="https://www.instagram.com/caarmeenmm?igsh=M29qc2Iwd2lwcWJ5" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/carmen-moreno-morales-135b5b360/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+      <div class="pie__legal">
+        <span>© <span id="anio">2026</span> Carmen Moreno Morales</span>
+        <span>carmorenomorales@gmail.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

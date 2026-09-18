@@ -3,96 +3,192 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contacto - Carmen Moreno Morales</title>
+  <title>Contacto — Carmen Moreno Morales</title>
+  <meta name="description" content="Contacta con Carmen Moreno Morales, directora de fotografía y creadora audiovisual en Sevilla y Málaga." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contacto — Carmen Moreno Morales" />
+  <meta property="og:description" content="Directora de fotografía y creadora audiovisual. Disponible para nuevos proyectos." />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%231B24E0'/><text x='16' y='24' font-family='Helvetica,Arial' font-size='22' font-weight='bold' fill='%23EFEEE9' text-anchor='middle'>C</text></svg>" />
+
+  <link rel="preload" href="css/fuentes/Aileron-Black.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/estilos.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  <style>
-    #mensaje-enviado {
-      display: none;
-      margin-top: 20px;
-      color: #228B22;
-      font-weight: bold;
-      text-align: center;
-      background-color: #e7f9e7;
-      border: 1px solid #b2d8b2;
-      padding: 12px 20px;
-      border-radius: 6px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-  </style>
 </head>
 <body>
-  <header>
-    <h1>Carmen Moreno Morales</h1>
-    <nav>
-      <ul>
+
+  <header class="cabecera">
+    <a class="marca" href="index.html">Carmen Moreno Morales</a>
+
+    <nav class="nav" id="nav" aria-label="Navegación principal">
+      <ul class="nav__lista">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="proyectos.html">Proyectos</a></li>
-        <li><a href="galeria.html">Galería</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
         <li><a href="curriculum.html">Currículum</a></li>
-        <li><a href="https://www.instagram.com/caarmeenmm?igsh=M29qc2Iwd2lwcWJ5" target="_blank"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/carmen-moreno-morales-135b5b360/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      </ul>
+      <ul class="nav__social">
+        <li><a href="https://www.instagram.com/caarmeenmm?igsh=M29qc2Iwd2lwcWJ5" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/carmen-moreno-morales-135b5b360/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
       </ul>
     </nav>
+
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+      <span></span>
+    </button>
   </header>
 
   <main>
-    <h2 class="titulo-pagina">Contacto</h2>
-    
-      <form id="contact-form" action="https://formsubmit.co/86a2a5de79bf06d8803309a13f14cc7c" method="POST">
-      <input type="hidden" name="_captcha" value="false">
 
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" name="name" required />
+    <section class="cabecera-pagina">
+      <div class="contenedor">
+        <p class="etiqueta">Contacto</p>
+        <h1 class="cabecera-pagina__titulo titulo--desborde">Cuéntame tu proyecto</h1>
+      </div>
+    </section>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="contacto-rejilla">
 
-      <label for="message">Mensaje:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+          <div class="revelar">
+            <p class="entradilla">Cortometraje, videoclip, videoarte o pieza de encargo: escríbeme y te respondo lo antes posible. Si prefieres el correo directo o LinkedIn, también funcionan.</p>
 
-      <button type="submit" class="btn">Enviar</button>
-    </form>
+            <ul class="canales">
+              <li>
+                <a href="mailto:carmorenomorales@gmail.com">
+                  <i class="fas fa-envelope" aria-hidden="true"></i>
+                  <span>
+                    <span class="canal-nombre">Email</span>
+                    <span class="canal-valor">carmorenomorales@gmail.com</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/carmen-moreno-morales-135b5b360/" target="_blank" rel="noopener">
+                  <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                  <span>
+                    <span class="canal-nombre">LinkedIn</span>
+                    <span class="canal-valor">Carmen Moreno Morales</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/caarmeenmm?igsh=M29qc2Iwd2lwcWJ5" target="_blank" rel="noopener">
+                  <i class="fab fa-instagram" aria-hidden="true"></i>
+                  <span>
+                    <span class="canal-nombre">Instagram</span>
+                    <span class="canal-valor">@caarmeenmm</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="curriculum.html">
+                  <i class="fas fa-file-lines" aria-hidden="true"></i>
+                  <span>
+                    <span class="canal-nombre">Currículum</span>
+                    <span class="canal-valor">Ver trayectoria completa</span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
 
-    <p id="mensaje-enviado">¡Mensaje enviado correctamente, gracias!</p>
+          <div class="revelar">
+            <form class="formulario" id="contact-form"
+                  action="https://formsubmit.co/86a2a5de79bf06d8803309a13f14cc7c" method="POST">
+              <input type="hidden" name="_captcha" value="false" />
+
+              <div class="campo">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required />
+              </div>
+
+              <div class="campo">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
+              </div>
+
+              <div class="campo">
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" rows="6"
+                          placeholder="Cuéntame qué tienes en mente: tipo de pieza, fechas y lo que necesitas." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primario">Enviar mensaje</button>
+
+              <p class="aviso" id="aviso-ok" role="status" hidden>
+                Mensaje enviado. Gracias, te responderé pronto.
+              </p>
+              <p class="aviso aviso--error" id="aviso-error" role="alert" hidden>
+                No se ha podido enviar. Escribe directamente a carmorenomorales@gmail.com
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie__fila">
+        <p class="pie__nombre">Carmen Moreno Morales</p>
+        <ul class="pie__social">
+          <li><a href="mailto:carmorenomorales@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
+          <li><a href="https://www.instagram.com/caarmeenmm?igsh=M29qc2Iwd2lwcWJ5" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/carmen-moreno-morales-135b5b360/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+      <div class="pie__legal">
+        <span>© <span id="anio">2026</span> Carmen Moreno Morales</span>
+        <span>carmorenomorales@gmail.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
   <script>
-    const form = document.getElementById('contact-form');
-    const mensaje = document.getElementById('mensaje-enviado');
+    /* Envío del formulario sin salir de la página */
+    (function () {
+      var formulario = document.getElementById('contact-form');
+      var avisoOk = document.getElementById('aviso-ok');
+      var avisoError = document.getElementById('aviso-error');
+      if (!formulario) return;
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault(); // Evitar redirección
-      const data = new FormData(form);
+      var boton = formulario.querySelector('button[type="submit"]');
+      var textoBoton = boton.textContent;
 
-      fetch(form.action, {
-        method: "POST",
-        body: data,
-        headers: {
-          'Accept': 'application/json'
-        }
-      }).then(response => {
-        if (response.ok) {
-          form.reset();
-          mensaje.style.display = 'block';
-          // Ocultar después de 5 segundos (opcional)
-          setTimeout(() => {
-            mensaje.style.display = 'none';
-          }, 5000);
-        } else {
-          alert("Hubo un problema al enviar el mensaje.");
-        }
-      }).catch(() => {
-        alert("Error al conectar con el servidor.");
+      formulario.addEventListener('submit', function (e) {
+        e.preventDefault();
+        avisoOk.hidden = true;
+        avisoError.hidden = true;
+        boton.disabled = true;
+        boton.textContent = 'Enviando…';
+
+        fetch(formulario.action, {
+          method: 'POST',
+          body: new FormData(formulario),
+          headers: { Accept: 'application/json' }
+        })
+          .then(function (respuesta) {
+            if (!respuesta.ok) throw new Error('Respuesta no válida');
+            formulario.reset();
+            avisoOk.hidden = false;
+          })
+          .catch(function () {
+            avisoError.hidden = false;
+          })
+          .finally(function () {
+            boton.disabled = false;
+            boton.textContent = textoBoton;
+          });
       });
-    });
+    })();
   </script>
 </body>
 </html>
-
-

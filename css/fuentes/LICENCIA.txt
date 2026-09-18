@@ -1,0 +1,12 @@
+Aileron
+Diseñada por Sora Sagano (dot colon) — https://dotcolon.net/font/aileron
+
+Licencia: CC0 1.0 Universal (dominio público)
+https://creativecommons.org/publicdomain/zero/1.0/
+
+Se puede usar, copiar, modificar y distribuir libremente, incluso con fines
+comerciales, sin necesidad de pedir permiso ni citar al autor.
+
+Archivos de esta carpeta: los pesos Regular, SemiBold, Bold y Black convertidos
+de OTF a WOFF2 con fonttools. No se incluyen las cursivas porque la web no usa
+ninguna.

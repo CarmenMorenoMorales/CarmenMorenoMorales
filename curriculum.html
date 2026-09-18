@@ -3,52 +3,262 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Currículum - Carmen Moreno Morales</title>
+  <title>Currículum — Carmen Moreno Morales</title>
+  <meta name="description" content="Currículum de Carmen Moreno Morales: graduada en Comunicación Audiovisual y máster en Dirección de Fotografía. Formación, experiencia y CV descargable en PDF." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Currículum — Carmen Moreno Morales" />
+  <meta property="og:description" content="Graduada en Comunicación Audiovisual y máster en Dirección de Fotografía." />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%231B24E0'/><text x='16' y='24' font-family='Helvetica,Arial' font-size='22' font-weight='bold' fill='%23EFEEE9' text-anchor='middle'>C</text></svg>" />
+
+  <link rel="preload" href="css/fuentes/Aileron-Black.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/estilos.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  <style>
-    .pdf-container {
-      width: 100%;
-      max-width: 900px;
-      margin: 40px auto;
-      height: 90vh;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    .pdf-container iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-    .titulo-pagina {
-      text-align: center;
-      font-size: 2.2em;
-      margin-top: 50px;
-    }
-  </style>
 </head>
 <body>
-  <header>
-    <h1>Carmen Moreno Morales</h1>
-    <nav>
-      <ul>
+
+  <header class="cabecera">
+    <a class="marca" href="index.html">Carmen Moreno Morales</a>
+
+    <nav class="nav" id="nav" aria-label="Navegación principal">
+      <ul class="nav__lista">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="proyectos.html">Proyectos</a></li>
-        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="curriculum.html" aria-current="page">Currículum</a></li>
         <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="curriculum.html">Currículum</a></li>
-        <li><a href="https://www.instagram.com/caarmeenmm?igsh=M29qc2Iwd2lwcWJ5" target="_blank"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/carmen-moreno-morales-135b5b360/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+      </ul>
+      <ul class="nav__social">
+        <li><a href="https://www.instagram.com/caarmeenmm?igsh=M29qc2Iwd2lwcWJ5" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/carmen-moreno-morales-135b5b360/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
       </ul>
     </nav>
+
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+      <span></span>
+    </button>
   </header>
+
   <main>
-    <h2 class="titulo-pagina">Currículum</h2>
-    <div class="pdf-container">
-      <iframe src="varios/curriculum.pdf"></iframe>
-    </div>
+
+    <section class="cabecera-pagina">
+      <div class="contenedor">
+        <h1 class="cabecera-pagina__titulo titulo--desborde">Currículum</h1>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="cv-rejilla">
+
+          <!-- ---------- Columna lateral ---------- -->
+          <aside class="cv-lateral revelar">
+            <img class="cv-retrato" src="Fotos/carmen-retrato.jpg"
+                 alt="Carmen Moreno Morales operando una cámara durante un rodaje"
+                 loading="lazy" width="1200" height="1200" />
+
+            <div class="tarjeta">
+              <h3>CV en PDF</h3>
+              <a class="btn btn--primario" href="varios/curriculum.pdf" download>
+                <i class="fas fa-download"></i> Descargar
+              </a>
+              <a class="btn" href="varios/curriculum.pdf" target="_blank" rel="noopener">
+                <i class="fas fa-up-right-from-square"></i> Abrir en pestaña
+              </a>
+            </div>
+
+            <div class="tarjeta">
+              <h3>Competencias digitales</h3>
+              <ul>
+                <li>Fotografía</li>
+                <li>Etalonaje en DaVinci Resolve</li>
+                <li>Edición de vídeo en Premiere, DaVinci y CapCut</li>
+                <li>Edición de audio en Reaper</li>
+                <li>Photoshop y Lightroom</li>
+                <li>Canva</li>
+                <li>Manejo avanzado de ofimática</li>
+              </ul>
+            </div>
+
+            <div class="tarjeta">
+              <h3>Idiomas</h3>
+              <ul>
+                <li>Castellano — nativo</li>
+                <li>Inglés — nivel alto, B2</li>
+              </ul>
+            </div>
+
+            <div class="tarjeta">
+              <h3>Contacto</h3>
+              <ul>
+                <li><a href="mailto:carmorenomorales@gmail.com">carmorenomorales@gmail.com</a></li>
+                <li><a href="https://www.linkedin.com/in/carmen-moreno-morales-135b5b360/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/caarmeenmm?igsh=M29qc2Iwd2lwcWJ5" target="_blank" rel="noopener">@caarmeenmm</a></li>
+              </ul>
+            </div>
+          </aside>
+
+          <!-- ---------- Contenido ---------- -->
+          <div class="cv-contenido">
+
+            <div class="bloque-cv revelar">
+              <h2 class="bloque-cv__titulo">Sobre mí</h2>
+              <p class="entradilla" style="max-width:none">
+                Graduada en Comunicación Audiovisual y especializada en creación de contenido audiovisual.
+                Tengo experiencia en producción y edición de vídeo, fotografía y creación de contenido para
+                redes sociales. Soy una persona organizada, creativa y resolutiva, acostumbrada a trabajar
+                en equipo, adaptarme a distintos proyectos y tomar iniciativa.
+              </p>
+            </div>
+
+            <div class="bloque-cv revelar">
+              <h2 class="bloque-cv__titulo">Formación</h2>
+              <p class="bloque-cv__nota">2020 – 2025</p>
+              <ul class="trayectoria">
+                <li>
+                  <span class="trayectoria__fecha">Oct 2025</span>
+                  <div>
+                    <h3 class="trayectoria__puesto">Curso de Iniciación de Eléctricos</h3>
+                    <p class="trayectoria__lugar">Cursos Off ESCAC</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="trayectoria__fecha">May 2025</span>
+                  <div>
+                    <h3 class="trayectoria__puesto">Curso de Etalonaje en DaVinci</h3>
+                    <p class="trayectoria__lugar">Cursos Off ESCAC</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="trayectoria__fecha">Oct 2024 – Jun 2025</span>
+                  <div>
+                    <h3 class="trayectoria__puesto">Máster en Dirección de Fotografía</h3>
+                    <p class="trayectoria__lugar">School Training, Escuela de Cine y Sonido</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="trayectoria__fecha">Sep 2020 – Jun 2024</span>
+                  <div>
+                    <h3 class="trayectoria__puesto">Grado en Comunicación Audiovisual</h3>
+                    <p class="trayectoria__lugar">Universidad de Sevilla</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bloque-cv revelar">
+              <h2 class="bloque-cv__titulo">Experiencia laboral</h2>
+              <p class="bloque-cv__nota">2021 – 2025</p>
+              <ul class="trayectoria">
+                <li>
+                  <span class="trayectoria__fecha">Sep 2025</span>
+                  <div>
+                    <h3 class="trayectoria__puesto">Videógrafa «Vive Andalucía» en San Diego Comic-Con Málaga</h3>
+                    <p class="trayectoria__lugar">Ernest, Remedios Atypical Content</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="trayectoria__fecha">Mar 2025 – Jul 2025</span>
+                  <div>
+                    <h3 class="trayectoria__puesto">Operadora de cámara en streaming</h3>
+                    <p class="trayectoria__lugar">Nomad Productions</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="trayectoria__fecha">Jun 2024 – Jul 2024</span>
+                  <div>
+                    <h3 class="trayectoria__puesto">Realización de contenido para redes sociales</h3>
+                    <p class="trayectoria__lugar">Facultad de Comunicación, Universidad de Sevilla</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="trayectoria__fecha">May 2024 – Jul 2024</span>
+                  <div>
+                    <h3 class="trayectoria__puesto">Realización de contenido para redes sociales</h3>
+                    <p class="trayectoria__lugar">DePalmera Pharma</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="trayectoria__fecha">Mar 2023</span>
+                  <div>
+                    <h3 class="trayectoria__puesto">Organización de las carreras Sevilla10</h3>
+                    <p class="trayectoria__lugar">Ayuntamiento de Sevilla</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="trayectoria__fecha">Sep 2021 – Jun 2022</span>
+                  <div>
+                    <h3 class="trayectoria__puesto">Grabación de espectáculos</h3>
+                    <p class="trayectoria__lugar">Orquesta Filarmonía de Sevilla</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="trayectoria__fecha">Sep 2021 – Jun 2022</span>
+                  <div>
+                    <h3 class="trayectoria__puesto">Realización del programa de radio «Atrapados»</h3>
+                    <p class="trayectoria__lugar">Universidad de Sevilla</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="trayectoria__fecha">Colaboración</span>
+                  <div>
+                    <h3 class="trayectoria__puesto">Vídeos de presentación de las marchas solidarias</h3>
+                    <p class="trayectoria__lugar">Manos Unidas, diócesis de Sevilla · también como fotógrafa del evento</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bloque-cv revelar">
+              <h2 class="bloque-cv__titulo">Rodajes</h2>
+              <p class="bloque-cv__nota">17 obras entre cortometraje, videoclip, videoarte y largometraje</p>
+              <p class="entradilla" style="max-width:none">
+                Dirección de fotografía en «Brujas», «Los acentos de tus ojos» y «Waltz to my 宝贝», entre otras;
+                y puestos de cámara, DIT, videoassist, gaffer y eléctrica en el resto.
+              </p>
+              <p style="margin-top:26px">
+                <a href="proyectos.html" class="enlace-flecha">Ver la filmografía completa <i class="fas fa-arrow-right"></i></a>
+              </p>
+            </div>
+
+            <div class="bloque-cv revelar">
+              <h2 class="bloque-cv__titulo">Voluntariado</h2>
+              <ul class="trayectoria">
+                <li>
+                  <span class="trayectoria__fecha">Voluntariado</span>
+                  <div>
+                    <h3 class="trayectoria__puesto">Monitora y voluntaria del banco de alimentos de Cáritas</h3>
+                    <p class="trayectoria__lugar">Parroquia Nuestra Señora de Lourdes y San Juan de Dios</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie__fila">
+        <p class="pie__nombre">Carmen Moreno Morales</p>
+        <ul class="pie__social">
+          <li><a href="mailto:carmorenomorales@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
+          <li><a href="https://www.instagram.com/caarmeenmm?igsh=M29qc2Iwd2lwcWJ5" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/carmen-moreno-morales-135b5b360/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+      <div class="pie__legal">
+        <span>© <span id="anio">2026</span> Carmen Moreno Morales</span>
+        <span>carmorenomorales@gmail.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

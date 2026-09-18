@@ -3,48 +3,544 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Proyectos - Carmen Moreno Morales</title>
+  <title>Proyectos — Carmen Moreno Morales</title>
+  <meta name="description" content="Cortometrajes, videoclips y videoarte con dirección de fotografía de Carmen Moreno Morales. Filmografía completa y piezas visionables." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Proyectos — Carmen Moreno Morales" />
+  <meta property="og:description" content="Cortometrajes, videoclips y videoarte. Dirección de fotografía, cámara y etalonaje." />
+  <meta property="og:image" content="Fotos/brujas-04.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%231B24E0'/><text x='16' y='24' font-family='Helvetica,Arial' font-size='22' font-weight='bold' fill='%23EFEEE9' text-anchor='middle'>C</text></svg>" />
+
+  <link rel="preload" href="css/fuentes/Aileron-Black.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/estilos.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <h1>Carmen Moreno Morales</h1>
-    <nav>
-      <ul>
+
+  <header class="cabecera">
+    <a class="marca" href="index.html">Carmen Moreno Morales</a>
+
+    <nav class="nav" id="nav" aria-label="Navegación principal">
+      <ul class="nav__lista">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
-        <li><a href="galeria.html">Galería</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="proyectos.html" aria-current="page">Proyectos</a></li>
         <li><a href="curriculum.html">Currículum</a></li>
-        <li><a href="https://www.instagram.com/caarmeenmm?igsh=M29qc2Iwd2lwcWJ5" target="_blank"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/carmen-moreno-morales-135b5b360/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <ul class="nav__social">
+        <li><a href="https://www.instagram.com/caarmeenmm?igsh=M29qc2Iwd2lwcWJ5" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/carmen-moreno-morales-135b5b360/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
       </ul>
     </nav>
+
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+      <span></span>
+    </button>
   </header>
-<main>
-  <h2 class="titulo-pagina">Proyectos</h2>
-  <div class="slider fade-slider">
-  <div class="slide active">
-    <iframe src="https://www.youtube.com/embed/wPHz7DYxSLY?list=PLvc2vCgXbQywOhsYuRzd3Iam_YNH0Uzj0&index=2" allowfullscreen></iframe>
+
+  <main>
+
+    <section class="cabecera-pagina">
+      <div class="contenedor">
+        <p class="etiqueta">Proyectos</p>
+        <h1 class="cabecera-pagina__titulo titulo--desborde">Trabajo en imagen</h1>
+        <p class="entradilla">Pasa el carrusel y abre cualquier pieza para verla en detalle. Debajo está la filmografía completa con el puesto ocupado en cada rodaje.</p>
+      </div>
+    </section>
+
+    <!-- ============ CARRUSEL ============ -->
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="carrusel">
+          <div class="carrusel__pista">
+
+            <div class="carrusel__item">
+              <article class="ficha">
+                <button class="ficha__lanzar" type="button" data-proyecto="waltz" aria-label="Ver Waltz to my 宝贝">
+                  <img class="ficha__img" src="Fotos/miniaturas/waltz-01.jpg" alt="Fotograma del videoclip Waltz to my 宝贝" width="900" height="506" />
+                  <span class="ficha__accion">Ver proyecto</span>
+                </button>
+                <div class="ficha__info">
+                  <p class="ficha__meta">Videoclip · 2026</p>
+                  <h2 class="ficha__titulo">Waltz to my 宝贝</h2>
+                  <p class="ficha__rol">Dirección de fotografía y etalonaje</p>
+                  <p class="ficha__prod">NVOH · La Colisión</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="carrusel__item">
+              <article class="ficha">
+                <button class="ficha__lanzar" type="button" data-proyecto="brujas" aria-label="Ver Brujas">
+                  <img class="ficha__img" src="Fotos/miniaturas/brujas-04.jpg" alt="Fotograma de la pieza de videoarte Brujas" loading="lazy" width="900" height="506" />
+                  <span class="ficha__accion">Ver proyecto</span>
+                </button>
+                <div class="ficha__info">
+                  <p class="ficha__meta">Videoarte · 2025</p>
+                  <h2 class="ficha__titulo">Brujas</h2>
+                  <p class="ficha__rol">Idea original · Dirección de fotografía · Etalonaje</p>
+                  <p class="ficha__prod">La Colisión</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="carrusel__item">
+              <article class="ficha">
+                <button class="ficha__lanzar" type="button" data-proyecto="acentos" aria-label="Ver Los acentos de tus ojos">
+                  <img class="ficha__img" src="Fotos/miniaturas/acentos-05.jpg" alt="Fotograma del cortometraje Los acentos de tus ojos" loading="lazy" width="900" height="506" />
+                  <span class="ficha__accion">Ver proyecto</span>
+                </button>
+                <div class="ficha__info">
+                  <p class="ficha__meta">Cortometraje · 2025</p>
+                  <h2 class="ficha__titulo">Los acentos de tus ojos</h2>
+                  <p class="ficha__rol">Dirección de fotografía y etalonaje</p>
+                  <p class="ficha__prod">4 fotogramas dentro</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="carrusel__item">
+              <article class="ficha">
+                <button class="ficha__lanzar" type="button" data-proyecto="perro" aria-label="Ver Estoy Buscando un Perro">
+                  <img class="ficha__img" src="https://img.youtube.com/vi/ZNkQypIA-M8/maxresdefault.jpg" alt="Fotograma del cortometraje Estoy Buscando un Perro" loading="lazy" width="1280" height="720" />
+                  <span class="ficha__accion">Ver proyecto</span>
+                </button>
+                <div class="ficha__info">
+                  <p class="distintivo"><i class="fas fa-award" aria-hidden="true"></i> Cortometraje ganador</p>
+                  <p class="ficha__meta">Cortometraje · 2025</p>
+                  <h2 class="ficha__titulo">Estoy Buscando un Perro</h2>
+                  <p class="ficha__rol">Auxiliar de cámara</p>
+                  <p class="ficha__prod">Festival de Cortometrajes de La Viñuela</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="carrusel__item">
+              <article class="ficha">
+                <button class="ficha__lanzar" type="button" data-proyecto="principio" aria-label="Ver Un Principio y Un Final">
+                  <img class="ficha__img" src="https://img.youtube.com/vi/CDa-dpcfRxY/hqdefault.jpg" alt="Fotograma del videoclip Un Principio y Un Final" loading="lazy" width="480" height="360" />
+                  <span class="ficha__accion">Ver proyecto</span>
+                </button>
+                <div class="ficha__info">
+                  <p class="ficha__meta">Videoclip · 2024</p>
+                  <h2 class="ficha__titulo">Un Principio y Un Final</h2>
+                  <p class="ficha__rol">Dirección de fotografía y cámara</p>
+                  <p class="ficha__prod">Ismael Moreno · La Colisión</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="carrusel__item">
+              <article class="ficha">
+                <button class="ficha__lanzar" type="button" data-proyecto="ciclicas" aria-label="Ver Cíclicas">
+                  <img class="ficha__img" src="https://img.youtube.com/vi/nanfLVYasnk/maxresdefault.jpg" alt="Fotograma del cortometraje Cíclicas" loading="lazy" width="1280" height="720" />
+                  <span class="ficha__accion">Ver proyecto</span>
+                </button>
+                <div class="ficha__info">
+                  <p class="ficha__meta">Cortometraje · 2024</p>
+                  <h2 class="ficha__titulo">Cíclicas</h2>
+                  <p class="ficha__rol">Dirección de fotografía y cámara</p>
+                  <p class="ficha__prod">La Instantánea</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="carrusel__item">
+              <article class="ficha">
+                <button class="ficha__lanzar" type="button" data-proyecto="sandra" aria-label="Ver Escribiendo a Sandra">
+                  <img class="ficha__img" src="https://img.youtube.com/vi/NAKD_sHdANY/maxresdefault.jpg" alt="Fotograma del cortometraje Escribiendo a Sandra" loading="lazy" width="1280" height="720" />
+                  <span class="ficha__accion">Ver proyecto</span>
+                </button>
+                <div class="ficha__info">
+                  <p class="ficha__meta">Cortometraje · 2023</p>
+                  <h2 class="ficha__titulo">Escribiendo a Sandra</h2>
+                  <p class="ficha__rol">Dirección de fotografía y cámara</p>
+                  <p class="ficha__prod">La Instantánea · II Edición CAVCREA</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="carrusel__item">
+              <article class="ficha">
+                <button class="ficha__lanzar" type="button" data-proyecto="sinti" aria-label="Ver Sin Ti No Puedo Vivir">
+                  <img class="ficha__img" src="https://img.youtube.com/vi/okj2z3_AEJs/maxresdefault.jpg" alt="Fotograma del videoclip Sin Ti No Puedo Vivir" loading="lazy" width="1280" height="720" />
+                  <span class="ficha__accion">Ver proyecto</span>
+                </button>
+                <div class="ficha__info">
+                  <p class="ficha__meta">Videoclip · 2025</p>
+                  <h2 class="ficha__titulo">Sin Ti No Puedo Vivir</h2>
+                  <p class="ficha__rol">Gaffer</p>
+                  <p class="ficha__prod">Jacquelin Adames</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="carrusel__item">
+              <article class="ficha">
+                <button class="ficha__lanzar" type="button" data-proyecto="octubre" aria-label="Ver 29 de Octubre de 2002">
+                  <img class="ficha__img" src="https://img.youtube.com/vi/wPHz7DYxSLY/maxresdefault.jpg" alt="Fotograma de la pieza 29 de Octubre de 2002" loading="lazy" width="1280" height="720" />
+                  <span class="ficha__accion">Ver proyecto</span>
+                </button>
+                <div class="ficha__info">
+                  <p class="ficha__meta">Cortometraje</p>
+                  <h2 class="ficha__titulo">29 de Octubre de 2002</h2>
+                  <p class="ficha__prod">Mara Ruiz Mejías</p>
+                </div>
+              </article>
+            </div>
+
+          </div>
+
+          <div class="carrusel__controles">
+            <button class="carrusel__btn carrusel__btn--anterior" type="button" aria-label="Proyecto anterior">
+              <i class="fas fa-arrow-left" aria-hidden="true"></i>
+            </button>
+            <button class="carrusel__btn carrusel__btn--siguiente" type="button" aria-label="Proyecto siguiente">
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </button>
+            <div class="carrusel__puntos"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FILMOGRAFÍA ============ -->
+    <section class="seccion seccion--alt">
+      <div class="contenedor">
+        <div class="encabezado-seccion revelar">
+          <p class="etiqueta">Trayectoria</p>
+          <h2 class="titulo-seccion titulo--desborde">Filmografía completa</h2>
+          <p class="entradilla">Diecisiete rodajes desde 2022. Las obras con ficha propia se abren al pulsar.</p>
+        </div>
+
+        <ul class="indice revelar">
+          <li><button class="indice__fila" type="button" data-proyecto="waltz">
+            <span class="anio">2026</span>
+            <span class="obra">Waltz to my 宝贝</span>
+            <span class="puesto">Dirección de fotografía · Etalonaje</span>
+            <span class="formato"><span class="marca-ficha">Ver ficha</span></span>
+          </button></li>
+
+          <li><button class="indice__fila" type="button" data-proyecto="brujas">
+            <span class="anio">2025</span>
+            <span class="obra">Brujas</span>
+            <span class="puesto">Idea original · Dir. fotografía · Etalonaje</span>
+            <span class="formato"><span class="marca-ficha">Ver ficha</span></span>
+          </button></li>
+
+          <li><button class="indice__fila" type="button" data-proyecto="acentos">
+            <span class="anio">2025</span>
+            <span class="obra">Los acentos de tus ojos</span>
+            <span class="puesto">Dirección de fotografía · Etalonaje</span>
+            <span class="formato"><span class="marca-ficha">Ver ficha</span></span>
+          </button></li>
+
+          <li><button class="indice__fila" type="button" data-proyecto="perro">
+            <span class="anio">2025</span>
+            <span class="obra">Estoy Buscando un Perro</span>
+            <span class="puesto">Auxiliar de cámara</span>
+            <span class="formato"><span class="marca-ficha">Ver ficha</span></span>
+          </button></li>
+
+          <li><div class="indice__fila">
+            <span class="anio">2025</span>
+            <span class="obra">Papa Noel ha muerto</span>
+            <span class="puesto">Ayudante de cámara · Festival de Málaga</span>
+            <span class="formato">Cortometraje</span>
+          </div></li>
+
+          <li><a class="indice__fila" href="https://www.instagram.com/p/DOikGLYDNBT/" target="_blank" rel="noopener">
+            <span class="anio">2025</span>
+            <span class="obra">Última cena</span>
+            <span class="puesto">Auxiliar de cámara</span>
+            <span class="formato"><span class="marca-ficha">Instagram</span></span>
+          </a></li>
+
+          <li><button class="indice__fila" type="button" data-proyecto="sinti">
+            <span class="anio">2025</span>
+            <span class="obra">Sin Ti No Puedo Vivir</span>
+            <span class="puesto">Gaffer</span>
+            <span class="formato"><span class="marca-ficha">Ver ficha</span></span>
+          </button></li>
+
+          <li><div class="indice__fila">
+            <span class="anio">2025</span>
+            <span class="obra">La Cura del yo</span>
+            <span class="puesto">Ayudante / auxiliar de cámara</span>
+            <span class="formato">Largometraje</span>
+          </div></li>
+
+          <li><button class="indice__fila" type="button" data-proyecto="ciclicas">
+            <span class="anio">2024</span>
+            <span class="obra">Cíclicas</span>
+            <span class="puesto">Dirección de fotografía · Cámara</span>
+            <span class="formato"><span class="marca-ficha">Ver ficha</span></span>
+          </button></li>
+
+          <li><div class="indice__fila">
+            <span class="anio">2024</span>
+            <span class="obra">Volar a casa</span>
+            <span class="puesto">Dirección de fotografía · Cámara</span>
+            <span class="formato">Cortometraje</span>
+          </div></li>
+
+          <li><button class="indice__fila" type="button" data-proyecto="principio">
+            <span class="anio">2024</span>
+            <span class="obra">Un Principio y Un Final</span>
+            <span class="puesto">Dirección de fotografía · Cámara</span>
+            <span class="formato"><span class="marca-ficha">Ver ficha</span></span>
+          </button></li>
+
+          <li><div class="indice__fila">
+            <span class="anio">2024</span>
+            <span class="obra">La bruja</span>
+            <span class="puesto">Ayudante / auxiliar de cámara</span>
+            <span class="formato">Cortometraje</span>
+          </div></li>
+
+          <li><div class="indice__fila">
+            <span class="anio">2024</span>
+            <span class="obra">Guardameta</span>
+            <span class="puesto">DIT / Data</span>
+            <span class="formato">Cortometraje</span>
+          </div></li>
+
+          <li><div class="indice__fila">
+            <span class="anio">2024</span>
+            <span class="obra">Estela azul</span>
+            <span class="puesto">Videoassist</span>
+            <span class="formato">Cortometraje</span>
+          </div></li>
+
+          <li><div class="indice__fila">
+            <span class="anio">2023</span>
+            <span class="obra">Not Fanny</span>
+            <span class="puesto">Dirección de fotografía</span>
+            <span class="formato">Cortometraje</span>
+          </div></li>
+
+          <li><button class="indice__fila" type="button" data-proyecto="sandra">
+            <span class="anio">2023</span>
+            <span class="obra">Escribiendo a Sandra</span>
+            <span class="puesto">Dirección de fotografía · Cámara</span>
+            <span class="formato"><span class="marca-ficha">Ver ficha</span></span>
+          </button></li>
+
+          <li><div class="indice__fila">
+            <span class="anio">2022</span>
+            <span class="obra">Victoria</span>
+            <span class="puesto">Eléctrica</span>
+            <span class="formato">Cortometraje</span>
+          </div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ EN RODAJE ============ -->
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="encabezado-seccion revelar">
+          <p class="etiqueta">Detrás de cámara</p>
+          <h2 class="titulo-seccion titulo--desborde">En rodaje</h2>
+          <p class="entradilla">El trabajo en set: cámara en mano, equipo y claqueta.</p>
+        </div>
+
+        <div class="rodaje revelar">
+          <button class="marco marco--ancho" type="button" data-imagen="Fotos/acentos-02.jpg" data-titulo="Los acentos de tus ojos — Rodaje, 2025">
+            <img src="Fotos/miniaturas/acentos-02.jpg" alt="Carmen operando la cámara durante un rodaje" loading="lazy" width="900" height="900" />
+            <span class="marco__pie">Los acentos de tus ojos</span>
+          </button>
+
+          <button class="marco" type="button" data-imagen="Fotos/acentos-01.jpg" data-titulo="Los acentos de tus ojos — Rodaje, 2025">
+            <img src="Fotos/miniaturas/acentos-01.jpg" alt="Equipo de cámara preparando un plano en exteriores" loading="lazy" width="900" height="974" />
+            <span class="marco__pie">Los acentos de tus ojos</span>
+          </button>
+
+          <button class="marco" type="button" data-imagen="Fotos/perro-03.jpg" data-titulo="Estoy Buscando un Perro — Rodaje, 2025">
+            <img src="Fotos/miniaturas/perro-03.jpg" alt="Carmen operando la cámara entre vegetación" loading="lazy" width="900" height="600" />
+            <span class="marco__pie">Estoy Buscando un Perro</span>
+          </button>
+
+          <button class="marco" type="button" data-imagen="Fotos/perro-02.jpg" data-titulo="Estoy Buscando un Perro — Rodaje, 2025">
+            <img src="Fotos/miniaturas/perro-02.jpg" alt="Carmen tras la cámara en un rodaje en exteriores" loading="lazy" width="900" height="600" />
+            <span class="marco__pie">Estoy Buscando un Perro</span>
+          </button>
+
+          <button class="marco" type="button" data-imagen="Fotos/perro-01.jpg" data-titulo="Estoy Buscando un Perro — Rodaje, 2025">
+            <img src="Fotos/miniaturas/perro-01.jpg" alt="Carmen consultando el guion durante el rodaje" loading="lazy" width="900" height="600" />
+            <span class="marco__pie">Estoy Buscando un Perro</span>
+          </button>
+
+          <button class="marco" type="button" data-imagen="Fotos/waltz-05.jpg" data-titulo="Waltz to my 宝贝 — Rodaje, 2026">
+            <img src="Fotos/miniaturas/waltz-05.jpg" alt="Equipo de rodaje del videoclip Waltz to my 宝贝" loading="lazy" width="900" height="603" />
+            <span class="marco__pie">Waltz to my 宝贝</span>
+          </button>
+
+          <button class="marco marco--ancho" type="button" data-imagen="Fotos/perro-04.jpg" data-titulo="Estoy Buscando un Perro — Equipo, 2025">
+            <img src="Fotos/miniaturas/perro-04.jpg" alt="Foto de grupo del equipo con la claqueta" loading="lazy" width="900" height="600" />
+            <span class="marco__pie">Equipo · Estoy Buscando un Perro</span>
+          </button>
+
+          <button class="marco marco--ancho" type="button" data-imagen="Fotos/brujas-05.jpg" data-titulo="Brujas — Equipo, 2025">
+            <img src="Fotos/miniaturas/brujas-05.jpg" alt="Foto de grupo del equipo de Brujas sobre un escenario" loading="lazy" width="900" height="600" />
+            <span class="marco__pie">Equipo · Brujas</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie__fila">
+        <p class="pie__nombre">Carmen Moreno Morales</p>
+        <ul class="pie__social">
+          <li><a href="mailto:carmorenomorales@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
+          <li><a href="https://www.instagram.com/caarmeenmm?igsh=M29qc2Iwd2lwcWJ5" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/carmen-moreno-morales-135b5b360/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+      <div class="pie__legal">
+        <span>© <span id="anio">2026</span> Carmen Moreno Morales</span>
+        <span>carmorenomorales@gmail.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ DETALLE DE PROYECTO ============ -->
+  <div class="detalle" id="detalle" role="dialog" aria-modal="true" aria-label="Detalle del proyecto" hidden>
+    <div class="detalle__barra">
+      <span class="detalle__marca">Carmen Moreno Morales</span>
+      <button class="detalle__cerrar" type="button">
+        <i class="fas fa-xmark" aria-hidden="true"></i> Cerrar
+      </button>
+    </div>
+    <div class="contenedor">
+      <div class="detalle__cuerpo"></div>
+    </div>
   </div>
-  <div class="slide">
-    <iframe src="https://www.youtube.com/embed/vLOAswleM38?list=PLvc2vCgXbQywOhsYuRzd3Iam_YNH0Uzj0&index=3" allowfullscreen></iframe>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada" hidden>
+    <button class="lightbox__cerrar" type="button" aria-label="Cerrar">&#10005;</button>
+    <div>
+      <div class="lightbox__marco"></div>
+      <p class="lightbox__pie"></p>
+    </div>
   </div>
-  <div class="slide">
-    <iframe src="https://www.youtube.com/embed/hPuZPmVw-qw?list=PLvc2vCgXbQywOhsYuRzd3Iam_YNH0Uzj0&index=4" allowfullscreen></iframe>
+
+  <!-- ===================================================================
+       CONTENIDO DE CADA FICHA
+       Van ocultos: el script los clona dentro del detalle al abrirlo.
+       Para añadir un proyecto: copia un bloque, cambia el id (fuente-CLAVE)
+       y pon data-proyecto="CLAVE" en el botón que lo abre.
+       =================================================================== -->
+  <div class="detalle-fuentes" hidden>
+
+    <div id="fuente-waltz">
+      <h2 class="detalle__titulo">Waltz to my 宝贝</h2>
+      <ul class="detalle__meta">
+        <li>Videoclip</li><li>2026</li><li>Dirección de fotografía</li><li>Etalonaje</li><li>NVOH · La Colisión</li>
+      </ul>
+      <div class="detalle__video" data-video="ciNucr2Odx8" data-titulo="Waltz to my 宝贝 — NVOH"></div>
+      <div class="detalle__fotos">
+        <img src="Fotos/waltz-01.jpg" alt="Dos personas vestidas de blanco bajo un árbol" />
+        <img src="Fotos/waltz-04.jpg" alt="Abrazo entre dos personas con flores en el pelo" />
+        <img src="Fotos/waltz-02.jpg" alt="Figura de blanco entre vegetación tropical" />
+        <img src="Fotos/waltz-03.jpg" alt="Puente entre vegetación con dos figuras al fondo" />
+      </div>
+    </div>
+
+    <div id="fuente-brujas">
+      <h2 class="detalle__titulo">Brujas</h2>
+      <ul class="detalle__meta">
+        <li>Videoarte</li><li>2025</li><li>Idea original</li><li>Dirección de fotografía</li><li>Etalonaje</li><li>La Colisión</li>
+      </ul>
+      <div class="detalle__video" data-video="vLOAswleM38" data-titulo="Brujas — Videoarte"></div>
+      <div class="detalle__fotos">
+        <img src="Fotos/brujas-01.jpg" alt="Mujer encapuchada sosteniendo un farol en la oscuridad" />
+        <img src="Fotos/brujas-02.jpg" alt="Grupo de mujeres vestidas de negro sobre fondo oscuro" />
+        <img src="Fotos/brujas-03.jpg" alt="Escena iluminada con velas" />
+        <img src="Fotos/brujas-04.jpg" alt="Retrato con luz roja intensa" />
+      </div>
+      <p class="detalle__nota">
+        <a class="enlace-flecha" href="https://www.youtube.com/watch?v=hPuZPmVw-qw" target="_blank" rel="noopener">
+          Ver el making of <i class="fas fa-arrow-up-right-from-square"></i>
+        </a>
+      </p>
+    </div>
+
+    <div id="fuente-acentos">
+      <h2 class="detalle__titulo">Los acentos de tus ojos</h2>
+      <ul class="detalle__meta">
+        <li>Cortometraje</li><li>2025</li><li>Dirección de fotografía</li><li>Etalonaje</li>
+      </ul>
+      <div class="detalle__fotos" style="margin-top:0">
+        <img src="Fotos/acentos-05.jpg" alt="Plano cenital de dos personas tumbadas" />
+        <img src="Fotos/acentos-03.jpg" alt="Dos personas en unas escaleras rodeadas de vegetación" />
+        <img src="Fotos/acentos-04.jpg" alt="Plano de detalle de dos personas" />
+        <img src="Fotos/acentos-06.jpg" alt="Interior de una habitación con una persona sentada en la cama" />
+      </div>
+      <p class="detalle__nota">Sin vídeo publicado todavía.</p>
+    </div>
+
+    <div id="fuente-perro">
+      <h2 class="detalle__titulo">Estoy Buscando un Perro</h2>
+      <ul class="detalle__meta">
+        <li>Cortometraje</li><li>2025</li><li>Auxiliar de cámara</li>
+      </ul>
+      <p class="distintivo"><i class="fas fa-award" aria-hidden="true"></i> Ganador del Festival de Cortometrajes de La Viñuela</p>
+      <div class="detalle__video" data-video="ZNkQypIA-M8" data-titulo="Estoy Buscando un Perro"></div>
+      <p class="detalle__nota">Las fotos de este rodaje están en la sección «En rodaje».</p>
+    </div>
+
+    <div id="fuente-principio">
+      <h2 class="detalle__titulo">Un Principio y Un Final</h2>
+      <ul class="detalle__meta">
+        <li>Videoclip</li><li>2024</li><li>Dirección de fotografía</li><li>Cámara</li><li>Ismael Moreno · La Colisión</li>
+      </ul>
+      <div class="detalle__video" data-video="CDa-dpcfRxY" data-titulo="Un Principio y Un Final — Ismael Moreno"></div>
+    </div>
+
+    <div id="fuente-ciclicas">
+      <h2 class="detalle__titulo">Cíclicas</h2>
+      <ul class="detalle__meta">
+        <li>Cortometraje</li><li>2024</li><li>Dirección de fotografía</li><li>Cámara</li><li>La Instantánea</li>
+      </ul>
+      <div class="detalle__video" data-video="nanfLVYasnk" data-titulo="Cíclicas"></div>
+    </div>
+
+    <div id="fuente-sandra">
+      <h2 class="detalle__titulo">Escribiendo a Sandra</h2>
+      <ul class="detalle__meta">
+        <li>Cortometraje</li><li>2023</li><li>Dirección de fotografía</li><li>Cámara</li><li>La Instantánea · II Edición CAVCREA</li>
+      </ul>
+      <div class="detalle__video" data-video="NAKD_sHdANY" data-titulo="Escribiendo a Sandra"></div>
+    </div>
+
+    <div id="fuente-sinti">
+      <h2 class="detalle__titulo">Sin Ti No Puedo Vivir</h2>
+      <ul class="detalle__meta">
+        <li>Videoclip</li><li>2025</li><li>Gaffer</li><li>Jacquelin Adames</li>
+      </ul>
+      <div class="detalle__video" data-video="okj2z3_AEJs" data-titulo="Sin Ti No Puedo Vivir — Jacquelin Adames"></div>
+    </div>
+
+    <!-- REVISAR CON CARMEN: no aparece en ningún CV ni en el dosier.
+         Falta confirmar el año y su puesto en el equipo. -->
+    <div id="fuente-octubre">
+      <h2 class="detalle__titulo">29 de Octubre de 2002</h2>
+      <ul class="detalle__meta">
+        <li>Cortometraje</li><li>Mara Ruiz Mejías</li>
+      </ul>
+      <div class="detalle__video" data-video="wPHz7DYxSLY" data-titulo="29 de Octubre de 2002"></div>
+    </div>
+
   </div>
-  <div class="slide">
-    <iframe src="https://www.youtube.com/embed/nanfLVYasnk?list=PLvc2vCgXbQywOhsYuRzd3Iam_YNH0Uzj0&index=5" allowfullscreen></iframe>
-  </div>
-  <div class="slide">
-    <iframe src="https://www.youtube.com/embed/NAKD_sHdANY?list=PLvc2vCgXbQywOhsYuRzd3Iam_YNH0Uzj0&index=6" allowfullscreen></iframe>
-  </div>
-  <button class="prev">&#10094;</button>
-  <button class="next">&#10095;</button>
-</div>
-</main>
-  <script src="js/slider.js"></script>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
