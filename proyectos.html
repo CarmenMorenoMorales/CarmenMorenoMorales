@@ -120,6 +120,21 @@
 
             <div class="carrusel__item">
               <article class="ficha">
+                <button class="ficha__lanzar" type="button" data-proyecto="ultimacena" aria-label="Ver Última cena">
+                  <img class="ficha__img" src="Fotos/miniaturas/ultimacena-01.jpg" alt="Rodaje de Última cena: equipo de cámara en una escalera con un actor tumbado en un sofá" loading="lazy" width="900" height="600" />
+                  <span class="ficha__accion">Ver proyecto</span>
+                </button>
+                <div class="ficha__info">
+                  <p class="ficha__meta">Cortometraje · 2025</p>
+                  <h2 class="ficha__titulo">Última cena</h2>
+                  <p class="ficha__rol">Auxiliar de cámara</p>
+                  <p class="ficha__prod">2 fotos de rodaje dentro</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="carrusel__item">
+              <article class="ficha">
                 <button class="ficha__lanzar" type="button" data-proyecto="principio" aria-label="Ver Un Principio y Un Final">
                   <img class="ficha__img" src="https://img.youtube.com/vi/CDa-dpcfRxY/hqdefault.jpg" alt="Fotograma del videoclip Un Principio y Un Final" loading="lazy" width="480" height="360" />
                   <span class="ficha__accion">Ver proyecto</span>
@@ -252,12 +267,12 @@
             <span class="formato">Cortometraje</span>
           </div></li>
 
-          <li><a class="indice__fila" href="https://www.instagram.com/p/DOikGLYDNBT/" target="_blank" rel="noopener">
+          <li><button class="indice__fila" type="button" data-proyecto="ultimacena">
             <span class="anio">2025</span>
             <span class="obra">Última cena</span>
             <span class="puesto">Auxiliar de cámara</span>
-            <span class="formato"><span class="marca-ficha">Instagram</span></span>
-          </a></li>
+            <span class="formato"><span class="marca-ficha">Ver ficha</span></span>
+          </button></li>
 
           <li><button class="indice__fila" type="button" data-proyecto="sinti">
             <span class="anio">2025</span>
@@ -418,16 +433,6 @@
         </div>
 
         <div class="rodaje revelar">
-          <button class="marco marco--ancho" type="button" data-imagen="Fotos/rodaje-01.jpg" data-titulo="Preparando el plano">
-            <img src="Fotos/miniaturas/rodaje-01.jpg" alt="Equipo de cámara preparando un plano en una escalera, con un actor tumbado en un sofá" loading="lazy" width="900" height="600" />
-            <span class="marco__pie">Preparando el plano</span>
-          </button>
-
-          <button class="marco" type="button" data-imagen="Fotos/rodaje-02.jpg" data-titulo="Ajuste de cámara">
-            <img src="Fotos/miniaturas/rodaje-02.jpg" alt="Carmen ajustando la cámara junto a un compañero de equipo" loading="lazy" width="900" height="600" />
-            <span class="marco__pie">Ajuste de cámara</span>
-          </button>
-
           <button class="marco marco--ancho" type="button" data-imagen="Fotos/acentos-02.jpg" data-titulo="Los acentos de tus ojos — Rodaje, 2025">
             <img src="Fotos/miniaturas/acentos-02.jpg" alt="Carmen operando la cámara durante un rodaje" loading="lazy" width="900" height="900" />
             <span class="marco__pie">Los acentos de tus ojos</span>
@@ -574,6 +579,22 @@
       <p class="distintivo"><i class="fas fa-award" aria-hidden="true"></i> Ganador del Festival de Cortometrajes de La Viñuela</p>
       <div class="detalle__video" data-video="ZNkQypIA-M8" data-titulo="Estoy Buscando un Perro"></div>
       <p class="detalle__nota">Las fotos de este rodaje están en la sección «En rodaje».</p>
+    </div>
+
+    <div id="fuente-ultimacena">
+      <h2 class="detalle__titulo">Última cena</h2>
+      <ul class="detalle__meta">
+        <li>Cortometraje</li><li>2025</li><li>Auxiliar de cámara</li>
+      </ul>
+      <div class="detalle__fotos" style="margin-top:0">
+        <img src="Fotos/ultimacena-01.jpg" alt="Equipo de cámara preparando un plano en una escalera, con un actor tumbado en un sofá" />
+        <img src="Fotos/ultimacena-02.jpg" alt="Carmen ajustando la cámara junto a un compañero de equipo" />
+      </div>
+      <p class="detalle__nota">
+        <a class="enlace-flecha" href="https://www.instagram.com/p/DOikGLYDNBT/" target="_blank" rel="noopener">
+          Ver la pieza en Instagram <i class="fas fa-arrow-up-right-from-square"></i>
+        </a>
+      </p>
     </div>
 
     <div id="fuente-principio">
