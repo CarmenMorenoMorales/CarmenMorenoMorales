@@ -1126,6 +1126,12 @@ button.indice__fila:hover .marca-ficha { opacity: 1; }
 
 /* ---------- 17. Responsive ---------- */
 @media (max-width: 1040px) {
+  /* Con cinco entradas el menu va justo antes de pasar a hamburguesa */
+  .nav { gap: 22px; }
+  .nav__lista { gap: 20px; }
+  .nav__social { gap: 12px; padding-left: 18px; }
+  .nav__lista a { font-size: 0.74rem; }
+
   .intro { grid-template-columns: 1fr; gap: 36px; }
   .cv-rejilla { grid-template-columns: 1fr; gap: 42px; }
   .cv-lateral { position: static; }
