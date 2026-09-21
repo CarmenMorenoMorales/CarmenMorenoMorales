@@ -108,6 +108,8 @@
                    procesar el formulario. Se usa su trampa antispam. -->
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table" />
+              <!-- Asunto de reserva; el script lo afina con el nombre de quien escribe -->
+              <input type="hidden" name="_subject" value="Portfolio — nuevo mensaje de contacto" />
 
               <!-- Trampa: invisible para las personas, los bots la rellenan
                    y FormSubmit descarta el envio sin avisar. -->
@@ -185,7 +187,7 @@
 
         // Un bot rellena y envia en menos de tres segundos; una persona no.
         // Se finge el acuse de recibo para no darle pistas.
-        if (Date.now() - cargadaEn < 3000 || formulario._honey.value) {
+        if (Date.now() - cargadaEn < 3000 || (formulario.querySelector('[name="_honey"]') || {}).value) {
           formulario.reset();
           avisoOk.hidden = false;
           return;
@@ -196,9 +198,19 @@
         boton.disabled = true;
         boton.textContent = 'Enviando…';
 
+        var datos = new FormData(formulario);
+
+        // El asunto lleva el nombre para distinguir de un vistazo quien escribe.
+        // Se limpian saltos de linea y se recorta: va a una cabecera de correo.
+        var campoNombre = formulario.querySelector('[name="name"]');
+        var quien = ((campoNombre && campoNombre.value) || '').replace(/[\r\n]+/g, ' ').trim().slice(0, 60);
+        datos.set('_subject', quien
+          ? 'Portfolio — mensaje de ' + quien
+          : 'Portfolio — nuevo mensaje de contacto');
+
         fetch(formulario.action, {
           method: 'POST',
-          body: new FormData(formulario),
+          body: datos,
           headers: { Accept: 'application/json' }
         })
           .then(function (respuesta) {
