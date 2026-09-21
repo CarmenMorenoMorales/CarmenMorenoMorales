@@ -10,6 +10,61 @@
 
   var animacionReducida = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ---------- Foco atrapado dentro de las ventanas ----------
+     Sin esto, con el detalle abierto el tabulador se escapaba a la pagina
+     de detras. Se apila por capas: el lightbox puede abrirse sobre el
+     detalle y al cerrarse debe devolver el bloqueo al detalle, no quitarlo. */
+  var foco = (function () {
+    var FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), ' +
+                    'textarea:not([disabled]), select:not([disabled]), ' +
+                    '[tabindex]:not([tabindex="-1"])';
+    var capas = [];
+    var soportaInert = 'inert' in HTMLElement.prototype;
+
+    function refrescar() {
+      var arriba = capas.length ? capas[capas.length - 1] : null;
+      Array.prototype.forEach.call(document.body.children, function (el) {
+        if (el.tagName === 'SCRIPT') return;
+        el.inert = !!(arriba && el !== arriba);
+      });
+    }
+
+    function visibles(ventana) {
+      return Array.prototype.filter.call(ventana.querySelectorAll(FOCUSABLE), function (el) {
+        return el.offsetWidth || el.offsetHeight || el.getClientRects().length;
+      });
+    }
+
+    return {
+      atrapar: function (ventana) {
+        capas.push(ventana);
+        if (soportaInert) refrescar();
+      },
+      soltar: function (ventana) {
+        var i = capas.indexOf(ventana);
+        if (i !== -1) capas.splice(i, 1);
+        if (soportaInert) refrescar();
+      },
+      // Respaldo para navegadores sin inert: cicla el tabulador a mano
+      ciclar: function (e) {
+        if (e.key !== 'Tab' || !capas.length) return;
+        var ventana = capas[capas.length - 1];
+        var lista = visibles(ventana);
+        if (!lista.length) return;
+        var primero = lista[0], ultimo = lista[lista.length - 1];
+        if (!ventana.contains(document.activeElement)) {
+          e.preventDefault(); primero.focus();
+        } else if (e.shiftKey && document.activeElement === primero) {
+          e.preventDefault(); ultimo.focus();
+        } else if (!e.shiftKey && document.activeElement === ultimo) {
+          e.preventDefault(); primero.focus();
+        }
+      }
+    };
+  })();
+
+  document.addEventListener('keydown', function (e) { foco.ciclar(e); });
+
   /* ---------- Menú móvil ---------- */
   var botonMenu = document.getElementById('menu-btn');
   var nav = document.getElementById('nav');
@@ -142,6 +197,7 @@
       detalle.hidden = false;
       detalle.scrollTop = 0;
       document.body.classList.add('sin-scroll');
+      foco.atrapar(detalle);
       requestAnimationFrame(function () { detalle.classList.add('visible'); });
       if (cerrarDetalle) cerrarDetalle.focus();
 
@@ -153,6 +209,7 @@
     var cerrar = function (actualizarUrl) {
       if (detalle.hidden) return;
       abiertoAhora = null;
+      foco.soltar(detalle);
       detalle.classList.remove('visible');
       document.body.classList.remove('sin-scroll');
       window.setTimeout(function () {
@@ -220,11 +277,13 @@
 
       lightbox.hidden = false;
       document.body.classList.add('sin-scroll');
+      foco.atrapar(lightbox);
       requestAnimationFrame(function () { lightbox.classList.add('visible'); });
       if (cerrarLightbox) cerrarLightbox.focus();
     };
 
     var cerrarFoto = function () {
+      foco.soltar(lightbox);
       lightbox.classList.remove('visible');
       // Si hay un detalle abierto detrás, el scroll sigue bloqueado por él
       if (!detalle || detalle.hidden) document.body.classList.remove('sin-scroll');

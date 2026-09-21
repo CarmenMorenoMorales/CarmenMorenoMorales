@@ -7,6 +7,7 @@
   <meta name="description" content="Contacta con Carmen Moreno Morales, directora de fotografía y creadora audiovisual en Sevilla y Málaga." />
 
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://carmenmorenomorales.github.io/CarmenMorenoMorales/contacto.html" />
   <meta property="og:title" content="Contacto — Carmen Moreno Morales" />
   <meta property="og:description" content="Directora de fotografía y creadora audiovisual. Disponible para nuevos proyectos." />
   <meta name="twitter:card" content="summary" />
@@ -15,7 +16,9 @@
 
   <link rel="preload" href="css/fuentes/Aileron-Black.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/estilos.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        rel="stylesheet" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -100,7 +103,18 @@
           <div class="revelar">
             <form class="formulario" id="contact-form"
                   action="https://formsubmit.co/86a2a5de79bf06d8803309a13f14cc7c" method="POST">
+              <!-- El captcha de FormSubmit no es compatible con el envio sin
+                   recargar pagina: devuelve un HTML de desafio en vez de
+                   procesar el formulario. Se usa su trampa antispam. -->
               <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+
+              <!-- Trampa: invisible para las personas, los bots la rellenan
+                   y FormSubmit descarta el envio sin avisar. -->
+              <div class="trampa" aria-hidden="true">
+                <label for="_honey">No rellenes este campo</label>
+                <input type="text" id="_honey" name="_honey" tabindex="-1" autocomplete="off" />
+              </div>
 
               <div class="campo">
                 <label for="name">Nombre</label>
@@ -164,8 +178,19 @@
       var boton = formulario.querySelector('button[type="submit"]');
       var textoBoton = boton.textContent;
 
+      var cargadaEn = Date.now();
+
       formulario.addEventListener('submit', function (e) {
         e.preventDefault();
+
+        // Un bot rellena y envia en menos de tres segundos; una persona no.
+        // Se finge el acuse de recibo para no darle pistas.
+        if (Date.now() - cargadaEn < 3000 || formulario._honey.value) {
+          formulario.reset();
+          avisoOk.hidden = false;
+          return;
+        }
+
         avisoOk.hidden = true;
         avisoError.hidden = true;
         boton.disabled = true;
